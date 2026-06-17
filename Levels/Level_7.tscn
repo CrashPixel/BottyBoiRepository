@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://cygc5rv48eqnm" path="res://Level_Assets/Hazards/small_lava.tscn" id="10"]
 [ext_resource type="PackedScene" uid="uid://bv1a2sa764ys8" path="res://Level_Assets/Hazards/crusher.tscn" id="11"]
 [ext_resource type="PackedScene" uid="uid://vop8u3pdy7av" path="res://Level_Assets/Harmless/box_button.tscn" id="12"]
-[ext_resource type="PackedScene" uid="uid://cj4p4xnt3p0rf" path="res://Level_Assets/Harmless/box.tscn" id="13"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_00q7s"]
 resource_name = "Ground"
@@ -527,16 +526,11 @@ position = Vector2(-12, -18)
 [node name="Crusher3" parent="." unique_id=1870796307 instance=ExtResource("11")]
 position = Vector2(60, -18)
 
-[node name="BoxSpawn" type="Node2D" parent="." unique_id=193204312]
-position = Vector2(138, -77)
+[node name="Box_Button" parent="." unique_id=2097852035 instance=ExtResource("12")]
+position = Vector2(147, -54)
 
-[node name="Box_Button" parent="BoxSpawn" unique_id=2097852035 node_paths=PackedStringArray("box") instance=ExtResource("12")]
-position = Vector2(9, 23)
-box = NodePath("../../BoxBody")
-
-[node name="BoxBody" parent="." unique_id=115444562 node_paths=PackedStringArray("box_spawn") instance=ExtResource("13")]
-position = Vector2(138, -77)
-box_spawn = NodePath("../BoxSpawn")
+[node name="BoxSpawn" parent="Box_Button" index="2" unique_id=1347609001]
+position = Vector2(-9, -22.999998)
 
 [node name="Small_Lava2" parent="." unique_id=1210653354 instance=ExtResource("10")]
 position = Vector2(24, 28)
@@ -562,3 +556,5 @@ rotation = 1.5708
 
 [node name="Small_Lava3" parent="." unique_id=1480760559 instance=ExtResource("10")]
 position = Vector2(84, 100)
+
+[editable path="Box_Button"]

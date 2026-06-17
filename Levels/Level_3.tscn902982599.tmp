@@ -506,13 +506,12 @@ position = Vector2(-36, 66)
 [node name="Crusher4" parent="." unique_id=1216239453 instance=ExtResource("8")]
 position = Vector2(36, 66)
 
-[node name="Box_Button" parent="." unique_id=1664499329 instance=ExtResource("9")]
-position = Vector2(27, -44)
+[node name="BoxSpawn" type="Node2D" parent="." unique_id=781957784]
+position = Vector2(42, -29)
 
-[node name="BoxSpawn" parent="Box_Button" index="2" unique_id=1347609001]
-position = Vector2(15, 15)
+[node name="Box_Button" parent="BoxSpawn" unique_id=1664499329 node_paths=PackedStringArray("box_spawn") instance=ExtResource("9")]
+position = Vector2(-15, -15)
+box_spawn = NodePath("..")
 
 [node name="Crusher5" parent="." unique_id=1120679220 instance=ExtResource("8")]
 position = Vector2(0, -18)
-
-[editable path="Box_Button"]

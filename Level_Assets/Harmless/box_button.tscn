@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://vop8u3pdy7av"]
+[gd_scene format=3 uid="uid://vop8u3pdy7av"]
 
 [ext_resource type="Texture2D" uid="uid://bwy1eu6cnkf1m" path="res://Assets/BoxButton.png" id="1"]
 [ext_resource type="Script" uid="uid://b8e158je5355j" path="res://Scripts/box_button.gd" id="2"]
@@ -85,26 +85,26 @@ _data = {
 &"RESET": SubResource("Animation_rfn42")
 }
 
-[node name="Box_Button" type="Sprite2D"]
+[node name="Box_Button" type="Sprite2D" unique_id=127182359]
 texture = ExtResource("1")
 flip_h = true
 hframes = 2
 frame = 1
 script = ExtResource("2")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1823592252]
 collision_layer = 8
 collision_mask = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=296630931]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_8njce")
 debug_color = Color(0.576471, 0, 0.623529, 0.419608)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_24a0h")
-}
-autoplay = "Idle"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1309542536]
+libraries/ = SubResource("AnimationLibrary_24a0h")
+autoplay = &"Idle"
+
+[node name="BoxSpawn" type="Node2D" parent="." unique_id=1347609001]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
