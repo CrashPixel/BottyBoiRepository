@@ -24,3 +24,9 @@ func _process(_delta: float):
 
 	if reset_timer == 1:
 		reset_stage()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey:
+		if event.pressed and event.keycode == KEY_R:
+			get_viewport().set_input_as_handled()
+			reset_stage()
