@@ -46,6 +46,7 @@ size = Vector2(11, 11)
 sprite_frames = SubResource("SpriteFrames_r6lnv")
 autoplay = "default"
 script = ExtResource("2")
+test_levels = ["res://Levels/Test_Level_Movement.tscn", "res://Levels/Test_Level_Hazards.tscn", "res://Levels/Test_Level_Pushing_Objects.tscn"]
 levels = ["res://Levels/Level_1.tscn", "res://Levels/Level_2.tscn", "res://Levels/Level_3.tscn", "res://Levels/Level_4.tscn", "res://Levels/Level_5.tscn", "res://Levels/Level_6.tscn", "res://Levels/Level_7.tscn", "res://Levels/Level_8.tscn", "res://Levels/Level_9.tscn", "res://Levels/Level_10.tscn", "res://Levels/Time_Score.tscn", "res://Levels/Main_Menu.tscn", "res://Levels/Level_11.tscn"]
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1081551243]

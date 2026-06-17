@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b8e158je5355j" path="res://Scripts/box_button.gd" id="2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8njce"]
-size = Vector2(3, 8)
+size = Vector2(4, 8)
 
 [sub_resource type="Animation" id="Animation_24a0h"]
 resource_name = "Idle"
@@ -97,7 +97,6 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=296630931]
-position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_8njce")
 debug_color = Color(0.576471, 0, 0.623529, 0.419608)
 

@@ -6,6 +6,8 @@ const COYOTE_TIME = 6
 const JUMP_BUFFER_TIME = 4
 const DASH_SPEED = 240
 const DASH_TIME = 16
+const PUSH_FORCE = 40
+const DASH_PUSH_FORCE = 6
 
 var coyote_timer = 0
 var dash_timer = 0

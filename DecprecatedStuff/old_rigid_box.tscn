@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cj4p4xnt3p0rf"]
+
+[ext_resource type="Script" uid="uid://co37w5nwbqt0e" path="res://Scripts/box_body.gd" id="1_frdms"]
+[ext_resource type="Texture2D" uid="uid://bf8lyqhxyvogc" path="res://Assets/Other Assets.png" id="2_1bfrq"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tfon7"]
+friction = 0.1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0du2u"]
+custom_solver_bias = 1.0
+size = Vector2(10, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfon7"]
+size = Vector2(10.25, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oq5cr"]
+size = Vector2(6, 2)
+
+[node name="BoxBody" type="RigidBody2D" unique_id=1896142166]
+mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_tfon7")
+gravity_scale = 0.5
+can_sleep = false
+lock_rotation = true
+script = ExtResource("1_frdms")
+
+[node name="Box" type="Sprite2D" parent="." unique_id=1721302077]
+texture = ExtResource("2_1bfrq")
+region_enabled = true
+region_rect = Rect2(5, 62, 10, 10)
+
+[node name="Wall_Box" type="CollisionShape2D" parent="." unique_id=1209186247]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_0du2u")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=22859756]
+polygon = PackedVector2Array(-5, 4, -2, 5, 2, 5, 5, 4)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=971696575]
+collision_layer = 8
+collision_mask = 2
+
+[node name="Player_Touch" type="CollisionShape2D" parent="Area2D" unique_id=1080242398]
+shape = SubResource("RectangleShape2D_tfon7")
+debug_color = Color(0.541176, 0.286275, 0.701961, 0.419608)
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=260799430]
+collision_layer = 8
+collision_mask = 5
+
+[node name="Hurt" type="CollisionShape2D" parent="Area2D2" unique_id=338616381]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_oq5cr")
+debug_color = Color(0.803922, 0.352941, 0, 0.419608)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="area_entered" from="Area2D2" to="." method="_on_area_2d_2_area_entered"]

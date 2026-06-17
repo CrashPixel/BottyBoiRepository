@@ -1,6 +1,6 @@
 extends Sprite2D
 
-@onready var load_box = preload("res://Level_Assets/Harmless/box.tscn")
+@onready var load_box = preload("res://Level_Assets/Harmless/character_box.tscn")
 @onready var box_spawn = $BoxSpawn
 var box
 var respawn_timer = 0

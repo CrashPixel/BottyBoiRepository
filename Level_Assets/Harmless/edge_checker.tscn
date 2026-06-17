@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dav4nfib5rhni"]
 
-[ext_resource type="Script" uid="uid://bwcd36mfqcdux" path="res://Levels/edge_checker.gd" id="1_sob0u"]
+[ext_resource type="Script" uid="uid://bwcd36mfqcdux" path="res://Scripts/edge_checker.gd" id="1_sob0u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wwkjg"]
 
