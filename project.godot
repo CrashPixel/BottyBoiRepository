@@ -27,8 +27,8 @@ GlobalTimer="*res://Scripts/timer.gd"
 
 [display]
 
-window/size/viewport_width=768
-window/size/viewport_height=432
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="viewport"
 
 [input]
