@@ -1,0 +1,33 @@
+GDRE Tools v2.5.0-beta.5
+Windows 10.0.26200, Intel(R) UHD Graphics, vulkan
+Opening file: C:/Users/oshaw/OneDrive/Desktop/Godot/BottyBoi.exe
+Loaded 67 imported files
+Detected Engine Version: 4.4.1
+Detected Bytecode Revision: 4.3.0-stable (77af6ca)
+Verified 139 files, no errors detected!
+Extracted 139 files, no errors detected!
+Saved project config.
+
+
+********************************EXPORT REPORT********************************
+
+Totals:                                 
+Decompiled scripts:                     11
+Failed scripts:                         0
+Imported resources for export session:  67
+Successfully converted:                 67
+Lossy:                                  3
+Rewrote metadata:                       24
+Non-importable conversions:             0
+Not converted:                          0
+Failed conversions:                     0
+-------------
+
+
+
+------------------------------------------------------------------------------------
+
+Use Godot editor version 4.4.1 to edit the project.
+
+*******************************************************************************
+

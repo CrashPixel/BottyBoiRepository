@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://sd13ox0478hw"
+path="res://.godot/imported/Botty Boi (Basic Loop).wav-d47ee4e5f67c081edda6ca8fc8c35189.sample"
+
+[deps]
+
+source_file="res://Assets/Botty Boi (Basic Loop).wav"
+dest_files=["res://.godot/imported/Botty Boi (Basic Loop).wav-d47ee4e5f67c081edda6ca8fc8c35189.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=48000
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=1
+edit/loop_begin=0
+edit/loop_end=10457872
+compress/mode=0

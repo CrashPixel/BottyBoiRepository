@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://63kleu6st5t7"]
+
+[ext_resource type="Texture2D" uid="uid://c1rx4e4fhhsib" path="res://Assets/Electric Hazard Animation.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psumg"]
+atlas = ExtResource("1")
+region = Rect2(0, 0, 12, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psyxs"]
+atlas = ExtResource("1")
+region = Rect2(12, 0, 12, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dpjf"]
+atlas = ExtResource("1")
+region = Rect2(0, 36, 12, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_av4eb"]
+atlas = ExtResource("1")
+region = Rect2(12, 36, 12, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ff8kw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psumg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psyxs")
+}],
+"loop": true,
+"name": &"Electricty",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dpjf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_av4eb")
+}],
+"loop": true,
+"name": &"Electricty_Wall",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1babq"]
+size = Vector2(3, 24)
+
+[node name="Electricty" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_ff8kw")
+animation = &"Electricty_Wall"
+autoplay = "Electricty_Wall"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_1babq")
+debug_color = Color(1, 0, 0, 0.419608)

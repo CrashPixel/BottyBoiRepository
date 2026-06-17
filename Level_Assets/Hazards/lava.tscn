@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://b41be2sremcey"]
+
+[ext_resource type="Texture2D" uid="uid://cwgpqr3saoj50" path="res://Assets/Lava Animation.png" id="1"]
+
+[sub_resource type="Animation" id="Animation_psyxs"]
+resource_name = "Flow"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_8dpjf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_av4eb"]
+_data = {
+&"Flow": SubResource("Animation_psyxs"),
+&"RESET": SubResource("Animation_8dpjf")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_34hvj"]
+size = Vector2(48, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gil3p"]
+size = Vector2(48, 8)
+
+[node name="Lava" type="Sprite2D"]
+z_index = 1
+texture_repeat = 2
+texture = ExtResource("1")
+vframes = 4
+region_enabled = true
+region_rect = Rect2(0, 0, 48, 64)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_av4eb")
+}
+autoplay = "Flow"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_34hvj")
+debug_color = Color(1, 0, 0, 0.419608)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_gil3p")

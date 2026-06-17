@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2qi7e845ie7x"]
+
+[ext_resource type="Texture2D" uid="uid://bf8lyqhxyvogc" path="res://Assets/Other Assets.png" id="1"]
+[ext_resource type="Script" uid="uid://10ldgtchwawj" path="res://Scripts/breakable.gd" id="2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hy76v"]
+size = Vector2(4, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tb32d"]
+size = Vector2(2, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ycxl"]
+size = Vector2(24, 2)
+
+[node name="Holder_Big" type="Sprite2D"]
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(53, 0, 12, 48)
+script = ExtResource("2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_hy76v")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_tb32d")
+debug_color = Color(0.760784, 0.290196, 0, 0.419608)
+
+[node name="Holder" type="StaticBody2D" parent="."]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Holder"]
+position = Vector2(0, 31)
+shape = SubResource("RectangleShape2D_8ycxl")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

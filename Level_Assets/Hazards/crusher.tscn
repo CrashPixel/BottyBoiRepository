@@ -1,0 +1,108 @@
+[gd_scene load_steps=7 format=3 uid="uid://bv1a2sa764ys8"]
+
+[ext_resource type="Texture2D" uid="uid://bf8lyqhxyvogc" path="res://Assets/Other Assets.png" id="1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_psumg"]
+size = Vector2(24, 4)
+
+[sub_resource type="Animation" id="Animation_nyuve"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -48)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Kill_Zone/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_312g6"]
+resource_name = "Slam"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.2, 2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -48), Vector2(0, -48), Vector2(0, -24), Vector2(0, -24), Vector2(0, -48)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Kill_Zone/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3612m"]
+_data = {
+&"RESET": SubResource("Animation_nyuve"),
+&"Slam": SubResource("Animation_312g6")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iulh7"]
+size = Vector2(24, 12)
+
+[node name="Crusher" type="Node2D"]
+
+[node name="Crusher_Head" type="Sprite2D" parent="."]
+position = Vector2(0, -48)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(67, 0, 24, 36)
+
+[node name="Kill_Zone" type="Area2D" parent="Crusher_Head"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crusher_Head/Kill_Zone"]
+position = Vector2(0, 17)
+shape = SubResource("RectangleShape2D_psumg")
+disabled = true
+debug_color = Color(1, 0, 0, 0.419608)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Crusher_Head"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Crusher_Head/StaticBody2D"]
+polygon = PackedVector2Array(-2, -18, -2, 8, -12, 12, -12, 18, 12, 18, 12, 12, 2, 8, 2, -18)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Crusher_Head"]
+libraries = {
+&"": SubResource("AnimationLibrary_3612m")
+}
+autoplay = "Slam"
+
+[node name="Crusher_Plate" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Crusher_Plate"]
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(67, 60, 24, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crusher_Plate"]
+shape = SubResource("RectangleShape2D_iulh7")

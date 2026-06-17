@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://h7jmodeekwdu"]
+
+[ext_resource type="Texture2D" uid="uid://bf8lyqhxyvogc" path="res://Assets/Other Assets.png" id="1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_87ehw"]
+size = Vector2(36, 6)
+
+[node name="Falling_Block" type="RigidBody2D"]
+collision_layer = 17
+collision_mask = 17
+can_sleep = false
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(5, 42, 36, 6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_87ehw")
