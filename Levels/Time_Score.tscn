@@ -1,6 +1,6 @@
-[gd_scene load_steps=19 format=4 uid="uid://dx74gpdff8mog"]
+[gd_scene format=4 uid="uid://dx74gpdff8mog"]
 
-[ext_resource type="PackedScene" uid="uid://m0h1ifnc2b1r" path="res://Level_Assets/Cameras/small_camera.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://m0h1ifnc2b1r" path="res://Level_Assets/Level_Structures/small_camera.tscn" id="1"]
 [ext_resource type="AudioStream" uid="uid://bknebwi3fmosx" path="res://Assets/BottyBoi_Menu.wav" id="2"]
 [ext_resource type="Texture2D" uid="uid://cv67nbd4x00jh" path="res://Assets/Level_Tiles.png" id="3"]
 [ext_resource type="Script" uid="uid://cb5oraxrj8tgn" path="res://Scripts/TilemapCollisionBaker.gd" id="4"]
