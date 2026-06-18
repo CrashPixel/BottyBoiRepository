@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dqkpvacuov7ll" path="res://Level_Assets/Level_Structures/ground_terrain.tscn" id="2_rmgrl"]
 [ext_resource type="PackedScene" uid="uid://df77laca1d6wd" path="res://Level_Assets/Level_Structures/background.tscn" id="3_rmgrl"]
 [ext_resource type="PackedScene" uid="uid://xrjhxp4y0u3e" path="res://Level_Assets/Level_Structures/music.tscn" id="4_rmgrl"]
-[ext_resource type="PackedScene" uid="uid://bjjprep3uoa1b" path="res://Level_Assets/Botty.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://bjjprep3uoa1b" path="res://Level_Assets/Level_Structures/Botty.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://cu5ttulii0aw" path="res://Level_Assets/Harmless/exit_star.tscn" id="7"]
 [ext_resource type="PackedScene" uid="uid://bxoi3q42hjj0h" path="res://Level_Assets/Harmless/big_falling_block.tscn" id="8"]
 [ext_resource type="PackedScene" uid="uid://b1asbsmbm2oqa" path="res://Level_Assets/Harmless/holder.tscn" id="10"]

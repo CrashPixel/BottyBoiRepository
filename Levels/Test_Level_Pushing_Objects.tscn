@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://m0h1ifnc2b1r" path="res://Level_Assets/Level_Structures/small_camera.tscn" id="1_1ojdt"]
 [ext_resource type="Texture2D" uid="uid://cv67nbd4x00jh" path="res://Assets/Level_Tiles.png" id="2_1ojdt"]
-[ext_resource type="PackedScene" uid="uid://bjjprep3uoa1b" path="res://Level_Assets/Botty.tscn" id="3_ricpp"]
+[ext_resource type="PackedScene" uid="uid://bjjprep3uoa1b" path="res://Level_Assets/Level_Structures/Botty.tscn" id="3_ricpp"]
 [ext_resource type="AudioStream" uid="uid://sd13ox0478hw" path="res://Assets/Botty Boi (Basic Loop).wav" id="4_wa8c6"]
 [ext_resource type="PackedScene" uid="uid://cu5ttulii0aw" path="res://Level_Assets/Harmless/exit_star.tscn" id="5_ec0dq"]
 [ext_resource type="PackedScene" uid="uid://vop8u3pdy7av" path="res://Level_Assets/Harmless/box_button.tscn" id="6_1ojdt"]

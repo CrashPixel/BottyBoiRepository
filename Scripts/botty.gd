@@ -25,9 +25,10 @@ func _physics_process(delta: float) -> void :
 
 	if halt_input > 0:
 		halt_input -= 1
-		$PlayerSprite.set_texture(color_picked.color)
+		
 
 	if not dead and halt_input == 0:
+		$PlayerSprite.set_texture(color_picked.color)
 
 		if not is_on_floor():
 			velocity += get_gravity() * delta

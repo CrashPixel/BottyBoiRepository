@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cv67nbd4x00jh" path="res://Assets/Level_Tiles.png" id="1"]
 [ext_resource type="PackedScene" uid="uid://d1u63snm7h7fe" path="res://Level_Assets/Level_Structures/big_camera.tscn" id="1_xuyj5"]
-[ext_resource type="PackedScene" uid="uid://bjjprep3uoa1b" path="res://Level_Assets/Botty.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://bjjprep3uoa1b" path="res://Level_Assets/Level_Structures/Botty.tscn" id="3"]
 [ext_resource type="AudioStream" uid="uid://sd13ox0478hw" path="res://Assets/Botty Boi (Basic Loop).wav" id="4"]
 [ext_resource type="PackedScene" uid="uid://h7jmodeekwdu" path="res://Level_Assets/Harmless/falling_block.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://bxoi3q42hjj0h" path="res://Level_Assets/Harmless/big_falling_block.tscn" id="6"]

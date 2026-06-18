@@ -4,7 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://bknebwi3fmosx" path="res://Assets/BottyBoi_Menu.wav" id="2"]
 [ext_resource type="Texture2D" uid="uid://cv67nbd4x00jh" path="res://Assets/Level_Tiles.png" id="3"]
 [ext_resource type="Script" uid="uid://cb5oraxrj8tgn" path="res://Scripts/TilemapCollisionBaker.gd" id="4"]
-[ext_resource type="PackedScene" uid="uid://bjjprep3uoa1b" path="res://Level_Assets/Botty.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://bjjprep3uoa1b" path="res://Level_Assets/Level_Structures/Botty.tscn" id="5"]
 [ext_resource type="Texture2D" uid="uid://sgci6efdrbsj" path="res://Assets/Backing_Tiles.png" id="6"]
 [ext_resource type="Script" uid="uid://dxdhsnaaql7ok" path="res://Scripts/end_timer.gd" id="7"]
 [ext_resource type="Texture2D" uid="uid://bkfj503o406xy" path="res://Assets/Numbers.png" id="8"]
