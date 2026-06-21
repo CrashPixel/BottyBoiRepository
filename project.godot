@@ -16,7 +16,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="BottyBoi"
 run/main_scene="uid://c3cak5bypwyn6"
-config/features=PackedStringArray("4.6", "GL Compatibility")
+config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="uid://cpyb0eqb7pu8m"
 config/windows_native_icon="res://Assets/botty.ico"
 
